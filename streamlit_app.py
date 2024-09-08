@@ -3,11 +3,7 @@ import streamlit as st
 st.markdown(
     """
 <style>
-button {
-height: auto;
-font-size: 116px;
-border: 0px
-}
+button.label {font-size: 116px}
 </style>
 """,
     unsafe_allow_html=True,
