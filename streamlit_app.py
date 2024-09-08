@@ -30,6 +30,6 @@ for i, x in enumerate(cols):
 for i, button in enumerate(buttons):
     if button:
         st.write(f"{i} button was clicked")
-        picture = st.camera_input("")
+        picture = st.camera_input("",label_visibility="collapsed")
         if picture:
             st.image(picture)
