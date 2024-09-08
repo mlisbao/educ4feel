@@ -1,5 +1,20 @@
 import streamlit as st
 
+st.markdown(
+    """
+<style>
+button {
+height: auto;
+font-size: 40px;
+padding: 0;
+border: none;
+background: none;
+}
+</style>
+""",
+    unsafe_allow_html=True,
+)
+
 buttons = []
 emojis = ["😡","😢","😐","😏","😃"]
 
