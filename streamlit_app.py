@@ -17,7 +17,7 @@ buttons = []
 emojis = ["😡","😢","😐","😏","😃"]
 
 st.title("Como voce está Agora?")
-cols = st.columns(5,gap="medium")
+cols = st.columns(5)
 
 for i, x in enumerate(cols):
     buttons.append(x.button(emojis[i]))
