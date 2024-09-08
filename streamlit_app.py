@@ -1,8 +1,10 @@
 import streamlit as st
 buttons = []
 emojis = ["😡","😢","😐","😏","😃"]
-cols = st.columns(5)
+
 st.title("Como voce está Agora?")
+
+cols = st.columns(5)
 
 for i, x in enumerate(cols):
     x.button(emojis[i])
