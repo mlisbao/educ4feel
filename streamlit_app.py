@@ -19,9 +19,7 @@ st.title("Como voce está Agora?")
 cols = st.columns(5)
 
 for i, x in enumerate(cols):
-    #buttons.append(x.button(emojis[i],key='big_font_button'))
-    #buttons.append(x.button(emojis[i],key='big_font_button'))
-    buttons.append(x.button(f'<span class="emoji">Big Font Button</span>'))
+    buttons.append(x.button(f'<span class="emoji">emojis[i]</span>'))
 
 for i, button in enumerate(buttons):
     if button:
