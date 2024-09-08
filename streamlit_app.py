@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.markdown("""<style>
-.emoji {font-size: 3.7em;
+button {font-size: 3.7em;
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
@@ -19,7 +19,7 @@ st.title("Como voce está Agora?")
 cols = st.columns(5)
 
 for i, x in enumerate(cols):
-    buttons.append(x.button(f'<span class="emoji">'+ emojis[i] + f'</span>',key=i))
+    buttons.append(x.button(emoji[i]))
     
 
 for i, button in enumerate(buttons):
