@@ -19,7 +19,7 @@ st.markdown("""<style>
 visibility:hidden;
 }
 </style>""", unsafe_allow_html=True)
-picture = st.camera_input("")
+
 buttons = []
 emojis = ["😡","😢","😐","😏","😃"]
 
@@ -28,7 +28,7 @@ cols = st.columns(5)
 
 for i, x in enumerate(cols):
     buttons.append(x.button(emojis[i]))
-    
+picture = st.camera_input("")
 
 for i, button in enumerate(buttons):
     if button:
