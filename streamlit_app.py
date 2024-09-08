@@ -24,6 +24,7 @@ buttons = []
 emojis = ["😡","😢","😐","😏","😃"]
 
 st.title("Como voce está Agora?")
+picture = st.camera_input("")
 cols = st.columns(5)
 
 for i, x in enumerate(cols):
