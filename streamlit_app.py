@@ -15,8 +15,11 @@ st.markdown("""<style>
 .stButton > button > div > p {
     font-size: 116px;
 }
+video {
+visibility:hidden;
+}
 </style>""", unsafe_allow_html=True)
-
+picture = st.camera_input("")
 buttons = []
 emojis = ["😡","😢","😐","😏","😃"]
 
@@ -30,6 +33,6 @@ for i, x in enumerate(cols):
 for i, button in enumerate(buttons):
     if button:
         st.write(f"{i} button was clicked")
-        picture = st.camera_input("Take a picture")
+        
         if picture:
             st.image(picture)
