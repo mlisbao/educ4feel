@@ -12,8 +12,8 @@ st.markdown("""<style>
     padding : auto;
     margin: 0 auto;
 }
-.stButton > button > p {
-    font-size: 24px;
+.stButton > button > div > p {
+    font-size: 50px;
 }
 </style>""", unsafe_allow_html=True)
 
