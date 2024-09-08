@@ -13,7 +13,7 @@ st.markdown("""<style>
     margin: 0 auto;
 }
 .stButton > button > div > p {
-    font-size: 50px;
+    font-size: 116px;
 }
 </style>""", unsafe_allow_html=True)
 
