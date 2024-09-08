@@ -6,6 +6,7 @@ button {
     height: auto;
     padding-top: 50px !important;
     padding-bottom: 50px !important;
+    font-size: 40px;
 }
 </style>
 """,
