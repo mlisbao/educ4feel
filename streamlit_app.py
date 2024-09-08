@@ -9,7 +9,7 @@ st.title("Como voce está Agora?")
 cols = st.columns(5)
 
 for i, x in enumerate(cols):
-    buttons.append(x.button(f'Teste emojis[i]'))
+    buttons.append(x.button(emojis[i]))
 
 for i, button in enumerate(buttons):
     if button:
