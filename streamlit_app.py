@@ -15,7 +15,7 @@ st.markdown("""<style>
 .stButton > button > div > p {
     font-size: 116px;
 }
-video {
+.stCameraInput  {
 visibility:hidden;
 }
 </style>""", unsafe_allow_html=True)
