@@ -2,7 +2,7 @@ import streamlit as st
 
 st.markdown("""<style>
 .stButton > button {
-  background-color:red;
+  font-size: 100px;
 }
 </style>""", unsafe_allow_html=True)
 
