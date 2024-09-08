@@ -1,15 +1,18 @@
 import streamlit as st
 
 st.markdown("""<style>
-button {font-size: 3.7em;
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    padding : auto;
-    margin: 0 auto;
+button {
+  background-color: Transparent;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 100px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
             </style>""", unsafe_allow_html=True)
 
 buttons = []
