@@ -5,7 +5,7 @@ st.markdown(
 <style>
 button {
 height: auto;
-font-size: 40px;
+font-size: 116px;
 border: 0px
 }
 </style>
