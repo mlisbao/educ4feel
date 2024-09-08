@@ -2,7 +2,7 @@ import streamlit as st
 
 st.markdown("""<style>
 .stButton > button {
-    font-size: 24px;
+    
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
@@ -11,6 +11,9 @@ st.markdown("""<style>
     outline:none;
     padding : auto;
     margin: 0 auto;
+}
+.stButton > button > p {
+    font-size: 24px;
 }
 </style>""", unsafe_allow_html=True)
 
