@@ -6,9 +6,7 @@ st.markdown(
 button {
 height: auto;
 font-size: 40px;
-padding: 0;
-border: none;
-background: none;
+border: 0px
 }
 </style>
 """,
