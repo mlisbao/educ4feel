@@ -4,8 +4,8 @@ st.markdown(
 <style>
 button {
     height: auto;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
 }
 </style>
 """,
