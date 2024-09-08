@@ -9,7 +9,7 @@ cols = st.columns(5)
 for i, x in enumerate(cols):
     x.button(emojis[i])
 
-for i, button in enumerate(buttons):
+for i, button in enumerate(x.buttons):
     if button:
         st.write(f"{i} button was clicked")
 
