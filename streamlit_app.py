@@ -24,8 +24,8 @@ buttons = []
 emojis = ["😡","😢","😐","😏","😃"]
 
 st.title("Como voce está Agora?")
-picture = st.camera_input("")
 cols = st.columns(5)
+picture = st.camera_input("")
 
 for i, x in enumerate(cols):
     buttons.append(x.button(emojis[i]))
@@ -34,6 +34,6 @@ for i, x in enumerate(cols):
 for i, button in enumerate(buttons):
     if button:
         st.write(f"{i} button was clicked")
-        picture = st.camera_input("")
+        
         if picture:
             st.image(picture)
