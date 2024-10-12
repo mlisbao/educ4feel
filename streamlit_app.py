@@ -1,38 +1,49 @@
 import streamlit as st
+from streamlit_webrtc import webrtc_streamer
+from deepface import DeepFace
 
-st.markdown("""<style>
-.stButton > button {
+# Função para realizar o reconhecimento facial e detectar emoções
+def detect_emotion(image):
+    try:
+        analysis = DeepFace.analyze(image, actions=['emotion'], enforce_detection=False)
+        return analysis['dominant_emotion']
+    except Exception as e:
+        return "Erro no reconhecimento facial"
+
+# Título
+st.title("Qual é o seu sentimento atual?")
+
+# Exibição dos botões de sentimentos com emojis
+col1, col2, col3, col4, col5 = st.columns(5)
+sentimento = None
+webrtc_ctx = None
+
+if col1.button("😀"):
+    sentimento = "feliz"
+if col2.button("😄"):
+    sentimento = "alegre"
+if col3.button("😐"):
+    sentimento = "normal"
+if col4.button("😕"):
+    sentimento = "triste"
+if col5.button("😡"):
+    sentimento = "raivoso"
+
+# Se o sentimento for escolhido, inicia a captura e análise
+if sentimento:
+    st.write(f"Você clicou no emoji representando o sentimento: {sentimento}")
     
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    padding : auto;
-    margin: 0 auto;
-}
-.stButton > button > div > p {
-    font-size: 116px;
-}
+    # Inicializa a câmera e captura a foto automaticamente
+    webrtc_ctx = webrtc_streamer(key="key", video_processor_factory=None, media_stream_constraints={"video": True, "audio": False})
 
-</style>""", unsafe_allow_html=True)
+    # Se a câmera está ativa e a imagem foi capturada
+    if webrtc_ctx and webrtc_ctx.video_receiver:
+        frame = webrtc_ctx.video_receiver.get_frame()
+        image = frame.to_ndarray(format="bgr24")
 
-buttons = []
-emojis = ["😡","😢","😐","😏","😃"]
-
-st.title("Como voce está Agora?")
-cols = st.columns(5)
-
-
-for i, x in enumerate(cols):
-    buttons.append(x.button(emojis[i]))
-
-
-for i, button in enumerate(buttons):
-    if button:
-        st.write(f"{i} button was clicked")
-        picture = st.camera_input("")
-        if picture:
-            st.image(picture)
+        # Processa a imagem e detecta o sentimento sem exibir a foto
+        emotion = detect_emotion(image)
+        st.write(f"O sentimento detectado pela análise facial é: *{emotion}*")
+    else:
+        st.warning("Nenhuma câmera detectada.")
 
