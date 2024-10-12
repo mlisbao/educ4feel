@@ -1,3 +1,3 @@
 streamlit
-webrtc_streamer
+streamlit-webrtc
 DeepFace
