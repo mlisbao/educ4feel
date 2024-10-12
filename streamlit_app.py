@@ -14,7 +14,7 @@ def detect_emotion(image):
 st.title("Qual é o seu sentimento atual?")
 
 # Inicializa a câmera (ativa, mas não exibida para o usuário)
-webrtc_ctx = webrtc_streamer(key="key", video_processor_factory=None, media_stream_constraints={"video": True, "audio": False}, mode="recvonly", async_processing=True)
+webrtc_ctx = webrtc_streamer(key="key", video_processor_factory=None, media_stream_constraints={"video": True, "audio": False})
 
 # Exibição dos botões de sentimentos com emojis
 col1, col2, col3, col4, col5 = st.columns(5)
