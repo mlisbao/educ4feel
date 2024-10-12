@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_webrtc import webrtc_streamer
-from deepface import deepface
+import deepface as DeepFace
 
 # Função para realizar o reconhecimento facial e detectar emoções
 def detect_emotion(image):
